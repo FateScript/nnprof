@@ -2,7 +2,7 @@
 
 ## Introduction
 
-nnprof is a profile tools for pytorch neurual networks. 
+nnprof is a profile tool for pytorch neural networks. 
 
 ### Features
 
@@ -19,7 +19,10 @@ nnprof is a profile tools for pytorch neurual networks.
 ## Get Started
 
 ### install nnprof
-* pip install: Comming soon.
+* pip install: 
+```shell
+pip install nnprof
+```
 * from source: 
 ```shell
 python -m pip install 'git+https://github.com/FateScript/nnprof.git'
@@ -46,7 +49,24 @@ with profile(model, mode=mode) as prof:
     y = model(x)
 
 print(prof.table(average=False, sorted_by="cpu_time"))
-# table could be sorted by header presented.
+# table could be sorted by presented header.
+```
+
+Part of presented table looks like table below, Note that they are sorted by cpu_time.
+```
+╒══════════════════════╤═══════════════════╤═══════════════════╤════════╕
+│ name                 │ self_cpu_time     │ cpu_time          │   hits │
+╞══════════════════════╪═══════════════════╪═══════════════════╪════════╡
+│ AlexNet.features.0   │ 19.114ms (34.77%) │ 76.383ms (45.65%) │      1 │
+├──────────────────────┼───────────────────┼───────────────────┼────────┤
+│ AlexNet.features.3   │ 5.148ms (9.37%)   │ 20.576ms (12.30%) │      1 │
+├──────────────────────┼───────────────────┼───────────────────┼────────┤
+│ AlexNet.features.8   │ 4.839ms (8.80%)   │ 19.336ms (11.56%) │      1 │
+├──────────────────────┼───────────────────┼───────────────────┼────────┤
+│ AlexNet.features.6   │ 4.162ms (7.57%)   │ 16.632ms (9.94%)  │      1 │
+├──────────────────────┼───────────────────┼───────────────────┼────────┤
+│ AlexNet.features.10  │ 2.705ms (4.92%)   │ 10.713ms (6.40%)  │      1 │
+├──────────────────────┼───────────────────┼───────────────────┼────────┤
 ```
 
 You are welcomed to try diffierent profile mode and more table format.
