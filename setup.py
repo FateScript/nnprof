@@ -14,7 +14,7 @@ def read(*parts):
 
 setuptools.setup(
     name="nnprof",
-    version="0.1.0",
+    version="0.1.1",
     author="Feng Wang",
     author_email="wffatescript@gmail.com",
     description="Profile tool for neural network(time, memory, etc.)",
@@ -24,6 +24,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     license="Apache License 2.0",
     install_requires=[
+        "tabulate",
         "torch",
         "numpy",
     ],

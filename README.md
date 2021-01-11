@@ -8,7 +8,7 @@ nnprof is a profile tool for pytorch neural networks.
 
 * **multi profile mode**: nnprof support 4 profile mode: Layer level, Operation level, Mixed level, Layer Tree level. Please check below for detail usage. 
 * **time and memory profile**: nnprof support both time and memory profile now. But since memory profile is first supported in pytorch 1.6, please use torch version >= 1.6 for memory profile.
-* **support sorted by given key and show profile percent**: user could print table with percentage and sorted profile info using a given key,  which is really helpful for optimiziing neurual network.
+* **support sorted by given key and show profile percent**: user could print table with percentage and sorted profile info using a given key,  which is really helpful for optimiziing neural network.
 
 ## Requirements
 
